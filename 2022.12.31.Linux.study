@@ -1,0 +1,45 @@
+# 서버 구축시 알아야 할 필수 개념과 명령어
+
+- sudo 명령어 : 일반 사용자가 관리자 권한 얻을 때 
+- # : 루트 사용자
+- $ : 일반 사용자 
+
+- 터미널/콘솔에서 시스템 종료 명령 실행
+  poweroff, shutdown -P now, halt -p, init 0
+ 
+- shutdown 명령어의 옵셥
+  shutdwon -P +10 : 10분 후 종료
+  shutdown -r 22:00 : 오후 10시에 재부팅
+  shutdown -c : 예약된 shutdown 취소
+  shutdown -k +15 : 현재 접속한 사용자에게 15분 후 종료된다는 메시지 보내지만 실제로 종료되지 않음
+ 
+- 시스템 재부팅
+  reboot, shutdown -r now, init 6
+  
+- 가상 콘솔
+ Ctrl + Alt + F2~F7 
+ 
+- 런레벨
+ init 명령어 뒤에 붙는 숫자 
+ 0 종료모드  1 시스템 복구 모드   2~5 다중 사용자 모드  6 재부팅
+  
+- Server 가상머신 한영 전환 Shift+Space bar
+  Client 가상머신 한영 전환 Ctrl+Space bar
+ 
+- 에디터 사용
+  gedit 에디터 (텍스트 모드 사용 불가)
+  nano 에디터 (nano -c nano1.txt 명령 실행하면 커서가 움직일 때 마다 아래쪽에 자동으로 행 번호가 표시된다.)
+  vi 에디터 
+    종료 : Esc + :q + enter
+    새로운 파일 생성 : vi new.txt 명령 입력 + I or A (입력 모드) + Esc(명령 모드) + :wq(저장 과 종료(라인 명령 모드)) + enter
+    cf. q! : 기존에 변경된 내용은 무시하고 종료하라는 의미 
+    cf. 비정상으로 종료된 파일 : ls -a 명령으로 파일을 확인하고 rm -f .new.txt.swp 명령으로 해당 스왑 파일 삭제
+    cf. dd 현재 커서의 행 삭제   yy 현재 커서가 있는 행을 복사   p 복사한 내용을 현재 행 이후에 붙여넣기   :set number : 앞에 행번호 생성 
+- 마운트와 CD/DVD, USB 활용
+  마운트 : 물리적인 장치를 특정한 위치(폴더)에 연결시키는 과정
+  마운트 해제 : umount /dev/cdrom
+  마운트 연결 : mount /dev/cdrom
+    
+    
+  
+ 
