@@ -81,4 +81,4 @@
 - 파일 소유권
   chown ubuntu sample.txt : sample.txt파일의 소유자를 ubuntu사용자로 바꾸기
   chown ubutnu.ubuntu sample.txt : 파일의 그룹도 ubuntu 그룹으로 바꿔라 
-   
+  
