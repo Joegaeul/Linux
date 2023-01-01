@@ -68,3 +68,17 @@
   groupmod : 그룹의 속성 변경
   groupdel newgroup2: newgroup2 그룹 삭제(해당 그룹 사용자가 없어야 함)
   gpasswd : 그룹 암호 설정 
+  
+# 파일, 디렉터리의 소유권과 허가권
+- 파일 허가권
+ rw-, r--, r-- 3개씩 끊어서 인식하면 된다. r read, w write, x execute의 약자 이다. 
+ 파일 허가권)
+      소유자      그룹      그 외 사용자
+        r w -      r - -     rwx
+        6          4         7
+- 파일 허가권 변경 명령어
+  chmod 777 sample.txt : sample.txt 파일은 모두느 사용자가 읽고, 쓰고, 실행할 수 있는 파일이 된다
+- 파일 소유권
+  chown ubuntu sample.txt : sample.txt파일의 소유자를 ubuntu사용자로 바꾸기
+  chown ubutnu.ubuntu sample.txt : 파일의 그룹도 ubuntu 그룹으로 바꿔라 
+   
