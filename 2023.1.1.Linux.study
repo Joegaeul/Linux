@@ -1,0 +1,70 @@
+# 리눅스 기본 명령어
+
+- ls
+  ls : 현재 디렉터리의 파일 목록
+  ls -a : 현재 디렉터리의 목록 숨김 파일 포함
+  ls -l : 현재 디렉터리의 목록을 자세히 보여줌
+  ls *. : 확장자 목록을 보여줌
+
+- cd
+  cd : 현재 사용자의 홈 디렉터리로 이동
+  cd .. : 바로 상위의 디렉터리로 이동(상대 경로)
+  cd /etc/systemd : /etc/systemd경로로 이동 (절대 경로)
+  
+- pwd
+  pwd : 현재 작업 중인 디렉터리의 경로 출력
+ 
+- rm
+  rm abc.txt : 해당 파일 삭제
+  rm -r cdrom : 디렉토리 삭제 
+  
+- cp
+  cp abc.txt cba.txt : abc.txt를 cba.txt라는 이름으로 바꿔서 복사
+
+- touch 
+  touch abc.txt : 파일이 없는 경우 빈 파일 생성
+
+- mv
+  mv abc.txt. cba.txt : abc.txt를 cba.txt로 변경해서 이동
+
+- mkdir
+  mkdir abc : 현재 디렉터리 아래에 /abc라는 디렉터리 생성
+  
+= rmdir
+  rmdir abc : abc 디렉터리 삭제
+  
+- cat
+  cat a.txt : a.txt 출력
+  
+- head, tail
+  head /etc/systemd/user.conf : 해당 파일의 앞 10행을 화면에 출력
+  tail -5/etc/systemd/user.conf : 마지막 5행만 화면에 출력
+  
+- more
+  more /etc/systemd/system.conf : 페이지 단위 출력
+- less
+  less /etc/systemd/system.conf : more 명령어와 용도가 비슷하지만 기능 확장
+- file
+  file : 어떤 종료의 파일인지 표시해줌
+
+- adduser
+  adduser :새로운 사용자 추가
+  adduser --uid 1111 newuser2 : newuser2 사용자를 생성하면서 사용자 ID를 1111로 지정
+  adduser --gid 1000 newuser3 : newuser3 사용자를 생성하면서 그룹 ID가 1000인 그룹에 newuser3 사용자를 포함시킴
+ 
+- passwd
+  passwd newuser1 : newuser1 사용자의 비밀번호 지정
+- usermod 
+  사용자의 속성 변경
+- userdel
+  userdel newuser2 : newuser2 사용자 삭제
+  userdel -r newuser2 : newuser2사용자 삭제, 홈 디렉터리까지 삭제
+
+- change
+  사용자의 암호를 주기적으로 변경하도록 설정
+- groups
+  groups newuser1 : newuser1 사용자가 소속된 그룹을 보여줌
+  groupadd newgroup1 : newgroup1 그룹 생성 
+  groupmod : 그룹의 속성 변경
+  groupdel newgroup2: newgroup2 그룹 삭제(해당 그룹 사용자가 없어야 함)
+  gpasswd : 그룹 암호 설정 
