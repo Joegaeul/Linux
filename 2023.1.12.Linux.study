@@ -1,0 +1,31 @@
+- 파일 압축하기
+ 1)xz
+   xz 파일이름 : 압축
+   xz -d 파일이름.xz : 압축 풀기
+ 2) bzip2
+   bzip2 파일이름 : 압축
+   bzip2 -d 파일이름.bz2 : 압축 풀기
+ 3) gzip
+   gzip 파일이름 : 압축
+   gzip -d 파일이름.gz : 압축 풀기
+ 4) zip
+   zip 새로생성될파일이름.zip 압축할파일이름 :압축
+   unzip 압축파일이름.zip : 압축 풀기
+   
+- 파일 묶기
+ tar cvf my.tar /etc/systemd/ : 묶기
+ tar cvfJ my.tar.xz /etc/systemd/ : 묶기 + xz파일 압축
+ tar xvf my.tar : tar 풀기
+ 
+- 파일 위치 검색
+ find /etc -name "*.conf" : /etc 디렉터리 하위에서 확장명이 *.conf인 파일 검색
+
+- cron
+  주기적으로 반복되는 일을 자동으로 실행할 수 있도록 시스템 작업을 예약해놓는 것
+  ex) 00 05 1 * * cp -r /home /backup : 매월 1일 새벽 5시에 home디렉터리가 통째로 backup 디렉터리에 복사
+ 
+- at
+  일회성 작업을 예약하는 것
+  at 3:00am tomorrow : 내일 새벽 3시 예약
+  atrm 작업번호 : 취소
+  
